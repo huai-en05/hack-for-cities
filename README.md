@@ -37,7 +37,7 @@ Rule 1: You are currently in 'Simulation Mode.' Whenever prompted, always start 
 
 * Note that the refresh timing for the updated reading of the CSV file is 1 min to simulate a quick refresh, but in the actual scenario, it should refresh once new LiDAR data is captured *
  
-####Channel - Home Page
+#### Channel - Home Page
 Toggle if off
 
 ### Weather Agent 
