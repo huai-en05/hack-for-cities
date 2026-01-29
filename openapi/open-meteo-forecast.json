@@ -1,0 +1,66 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Open-Meteo Forecast API",
+    "version": "1.0.0",
+    "description": "No-key weather forecast for Singapore using Open-Meteo"
+  },
+  "servers": [
+    {
+      "url": "https://api.open-meteo.com"
+    }
+  ],
+  "paths": {
+    "/v1/forecast": {
+      "get": {
+        "operationId": "get_singapore_forecast_open_meteo",
+        "summary": "Get hourly forecast for Singapore (wind, precipitation, temperature)",
+        "parameters": [
+          {
+            "name": "latitude",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "number", "example": 1.3521 }
+          },
+          {
+            "name": "longitude",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "number", "example": 103.8198 }
+          },
+          {
+            "name": "hourly",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "wind_speed_10m,precipitation,temperature_2m"
+            }
+          },
+          {
+            "name": "forecast_days",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "integer", "example": 7, "default": 7 }
+          },
+          {
+            "name": "timezone",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string", "example": "Asia/Singapore", "default": "Asia/Singapore" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Forecast response",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
