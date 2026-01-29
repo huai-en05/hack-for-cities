@@ -5,8 +5,7 @@ ArborGuard AI is a three-agent system designed to monitor tree vulnerability, an
 
 The system assumes the availability of basic sensing infrastructure, such as periodic Light Detection and Ranging (LiDAR) scans. In the prototype, these inputs are simulated using representative datasets to demonstrate system behaviour in the absence of real-world data. This assumption reflects realistic deployment conditions in Singapore, where such data is increasingly available through smart city initiatives. At the core of ArborGuard AI is its agentic design. Each agent maintains its own goals and reasoning logic while sharing insights with the others to collectively reduce tree failure risk. 
 
-Tree Health Agent
-Evaluates the structural vulnerability of individual trees using parameters such as canopy density, tree height and lean angle. These parameters are combined using rule-based formulas to compute a qualitative tree risk score that represents the likelihood of failure due to physical instability or poor health, as well as a computed probability of the tree falling.
+Tree Health Agent evaluates the structural vulnerability of individual trees and computes a qualitative tree risk score that represents the likelihood of failure due to physical instability or poor health, as well as a computed probability of the tree falling.
 
 Climate Agent
 Monitors real-time and forecasted weather conditions using the OpenMateo API. Key indicators such as wind speed and rainfall intensity are translated into environmental stress factors. Rather than producing standalone alerts, the Climate Agent dynamically adjusts risk thresholds, amplifying concern for structurally vulnerable trees when extreme weather conditions are expected.
@@ -42,6 +41,6 @@ Contributors
  5. Tan Huai En
  
 Additional Notes
-Assume that 
- 
+Assume that The system assumes the availability of basic sensing infrastructure, such as periodic Light Detection and Ranging (LiDAR) scans. In the prototype, these inputs are simulated using representative datasets to demonstrate system behaviour in the absence of real-world data. 
+
 Please ensure that the repository is well-organised, excludes any sensitive information (e.g. API keys or credentials), and is easy for judges to review.
