@@ -7,14 +7,10 @@ The system assumes the availability of basic sensing infrastructure, such as per
 
 Tree Health Agent evaluates the structural vulnerability of individual trees and computes a qualitative tree risk score that represents the likelihood of failure due to physical instability or poor health, as well as a computed probability of the tree falling.
 
-Climate Agent
-Monitors real-time and forecasted weather conditions using the OpenMateo API. Key indicators such as wind speed and rainfall intensity are translated into environmental stress factors. Rather than producing standalone alerts, the Climate Agent dynamically adjusts risk thresholds, amplifying concern for structurally vulnerable trees when extreme weather conditions are expected.
+Climate Agent monitors weather conditions using the OpenMateo API dynamically adjusts risk thresholds and amplifying concern for structurally vulnerable trees.
 
 Risk Assessment Agent
-Synthesises outputs from the Tree Health and Climate Agents to prioritise trees for inspection or closer monitoring. It flags high-risk cases for human review and provides concise, explainable recommendations aligned with the municipality's existing workflows. Importantly, the system does not automate physical interventions such as pruning or removal. Instead, it focuses on risk awareness and prioritisation, ensuring that limited inspection resources are directed where they are most needed.
-
-Together, these agents enable a shift from reactive to predictive tree risk management, improving safety outcomes while preserving Singapore’s urban greenery.
-
+Synthesises outputs from the Tree Health and Climate Agents to prioritise trees for inspection or closer monitoring.
 
 
 
